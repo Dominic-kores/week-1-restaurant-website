@@ -1,0 +1,2153 @@
+/* -----------------------------------SAVANNA GRILL MAIN STYLESHEET ------------------------- */
+
+
+/* --------GOOGLE FONTS --------------------- */
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap'
+);
+
+
+/* ----CSS VARIABLES-------- */
+
+:root {
+
+    --dark-green: #1f2d24;
+    --green: #3e5a47;
+
+    --gold: #c69245;
+    --gold-dark: #a77733;
+
+    --brown: #7c4f2b;
+
+    --cream: #f7f1e7;
+    --light-cream: #fcfaf6;
+
+    --white: #ffffff;
+
+    --text-dark: #292929;
+    --text-light: #666666;
+
+    --border: #ded8cf;
+
+    --shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* ---------RESET OUR CSS STYLESHEET------------------- */
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+   /* ---------GLOBAL ------------*/
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    color:
+        var(--text-dark);
+
+    background:
+        var(--white);
+
+    line-height: 1.7;
+
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+a {
+
+    color: inherit;
+
+}
+
+h1,
+h2,
+h3 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    line-height: 1.2;
+
+}
+
+h1 {
+
+    font-size: 4rem;
+
+}
+
+h2 {
+
+    font-size: 2.3rem;
+
+}
+
+h3 {
+
+    font-size: 1.35rem;
+
+}
+
+p {
+
+    color:
+        var(--text-light);
+
+}
+
+.section {
+
+    padding:
+        90px 8%;
+
+}
+
+
+/* ----------------------------------SECTION HEADINGS ------------------------------------------- */
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin:
+        0 auto 50px;
+
+    text-align: center;
+
+}
+
+.section-heading h2 {
+
+    margin-bottom:
+        15px;
+
+}
+
+.eyebrow {
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        0.8rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+/* ---------------------NAVIGATION------------------------------------ */
+
+.site-header {
+
+    background:
+        var(--white);
+
+    border-bottom:
+        1px solid
+        rgba(0, 0, 0, 0.07);
+
+    position:
+        sticky;
+
+    top: 0;
+
+    z-index:
+        1000;
+
+}
+
+.navbar {
+
+    max-width:
+        1400px;
+
+    margin:
+        0 auto;
+
+    padding:
+        18px 8%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+.logo {
+
+    color:
+        var(--dark-green);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        1.7rem;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+
+}
+
+.nav-links {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        30px;
+
+}
+
+.nav-links a {
+
+    color:
+        var(--text-dark);
+
+    font-size:
+        0.95rem;
+
+    font-weight:
+        600;
+
+    text-decoration:
+        none;
+
+    position:
+        relative;
+
+    padding:
+        7px 0;
+
+}
+
+.nav-links a::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        0;
+
+    height:
+        2px;
+
+    background:
+        var(--gold);
+
+    transition:
+        width 0.3s ease;
+
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+
+    width:
+        100%;
+
+}
+
+.nav-links a.active {
+
+    color:
+        var(--gold-dark);
+
+}
+
+
+
+
+/* ------------------BUTTONS-------------------- */
+
+
+.btn {
+
+    display:
+        inline-block;
+
+    padding:
+        13px 27px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--white);
+
+    border:
+        none;
+
+    border-radius:
+        4px;
+
+    text-decoration:
+        none;
+
+    font-family:
+        inherit;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.3s ease;
+
+}
+
+.btn:hover {
+
+    background:
+        var(--gold-dark);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+
+/* ---------------HOME HERO --------------------- */
+
+
+.hero {
+
+    min-height:
+        82vh;
+
+    padding:
+        60px 8%;
+
+    background-image:
+
+        linear-gradient(
+            rgba(10, 20, 14, 0.62),
+            rgba(10, 20, 14, 0.62)
+        ),
+
+        url(
+            "./images/savanna-background.jpg"
+        );
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    color:
+        var(--white);
+
+}
+
+.hero-content {
+
+    max-width:
+        800px;
+
+    animation:
+        fadeUp 1.2s ease;
+
+}
+
+.hero-content .eyebrow {
+
+    color:
+        #f2ce93;
+
+}
+
+.hero h1 {
+
+    color:
+        var(--white);
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            6rem
+        );
+
+    margin-bottom:
+        15px;
+
+}
+
+.hero-tagline {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    font-size:
+        1.35rem;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* --------SPECIAL OFFER SECTION---------------------------- */
+
+
+.special-offer {
+
+    background:
+        var(--gold);
+
+    padding:
+        25px 8%;
+
+    text-align:
+        center;
+
+}
+
+.special-offer p,
+.special-offer h2 {
+
+    color:
+        var(--white);
+
+}
+
+.special-offer h2 {
+
+    font-size:
+        1.8rem;
+
+}
+
+
+/* ----------FEATURED DISHES SECTION----------------------------- */
+
+
+.featured {
+
+    background:
+        var(--light-cream);
+
+}
+
+.dish-container {
+
+    max-width:
+        1200px;
+
+    margin:
+        0 auto;
+
+    display:
+        flex;
+
+    gap:
+        30px;
+
+}
+
+.dish-card {
+
+    flex:
+        1;
+
+    background:
+        var(--white);
+
+    border-radius:
+        10px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.dish-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            0,
+            0,
+            0,
+            0.14
+        );
+
+}
+
+.dish-card img {
+
+    width:
+        100%;
+
+    height:
+        250px;
+
+    object-fit:
+        cover;
+
+}
+
+.card-content {
+
+    padding:
+        25px;
+
+}
+
+.card-content h3 {
+
+    margin-bottom:
+        10px;
+
+}
+
+.card-price {
+
+    display:
+        inline-block;
+
+    margin-top:
+        15px;
+
+    color:
+        var(--gold-dark);
+
+    font-weight:
+        700;
+   
+
+}
+
+/* Featured dishes container */
+.featured-items {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Individual dish card */
+.featured-item {
+    flex: 1;
+    max-width: 380px;
+}
+
+
+/* Images */
+.featured-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+/* ---------WHY US SECTION----------------------------- */
+
+
+.why-us {
+
+    background:
+        var(--white);
+
+}
+
+.features {
+
+    max-width:
+        1100px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:
+        30px;
+
+}
+
+.feature-card {
+
+    text-align:
+        center;
+
+    padding:
+        35px 25px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        8px;
+
+    transition:
+        all 0.3s ease;
+
+}
+
+.feature-card:hover {
+
+    border-color:
+        var(--gold);
+
+    transform:
+        translateY(-5px);
+
+}
+
+.feature-icon {
+
+    font-size:
+        2.5rem;
+
+    margin-bottom:
+        15px;
+
+}
+
+.feature-card h3 {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+/* -----GALLERY SECTION----------------------------- */
+
+
+.gallery {
+    padding: 
+        70px 8%;
+
+    background:
+        var(--cream);
+
+}
+
+.gallery-grid {
+
+    max-width:
+        1200px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr
+        );
+
+    gap:
+        20px;
+
+}
+
+.gallery-grid img {
+
+    width:
+        100%;
+
+    height:
+        250px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        8px;
+
+    transition:
+        transform 0.3s ease;
+    
+    display: block;    
+
+}
+
+.gallery-grid img:hover {
+
+    transform:
+        scale(1.025);
+
+}
+
+
+/* ----CALL TO ACTION-----------------------------*/
+
+.cta {
+
+    padding:
+        100px 8%;
+
+    background:
+        var(--dark-green);
+
+    text-align:
+        center;
+
+}
+
+.cta > div {
+
+    max-width:
+        700px;
+
+    margin:
+        0 auto;
+
+}
+
+.cta h2 {
+
+    color:
+        var(--white);
+
+    font-size:
+        2.8rem;
+
+    margin-bottom:
+        15px;
+
+}
+
+.cta p {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.78
+        );
+
+    margin-bottom:
+        25px;
+
+}
+
+.cta .eyebrow {
+
+    color:
+        #ebc98e;
+
+}
+
+
+/* -----PAGE BANNERS SECTION----------------------------- */
+
+
+.page-banner {
+
+    min-height:
+        45vh;
+
+    padding:
+        60px 8%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    color:
+        var(--white);
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+
+}
+
+.page-banner > div {
+
+    max-width:
+        700px;
+
+}
+
+.page-banner h1 {
+
+    color:
+        var(--white);
+
+    margin-bottom:
+        15px;
+
+}
+
+.page-banner p {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.9
+        );
+
+}
+
+.page-banner .eyebrow {
+
+    color:
+        #efd19c;
+
+}
+
+.menu-banner {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.58)
+        ),
+
+        url(
+            "https://picsum.photos/seed/savannamenu/1800/700"
+        );
+
+}
+
+.about-banner {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.58)
+        ),
+
+        url(
+            "https://picsum.photos/seed/savannaabout/1800/700"
+        );
+
+}
+
+.contact-banner {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.58)
+        ),
+
+        url(
+            "./images/contact-us.jpeg"
+        );
+
+}
+
+
+
+/* -------MENU PAGE NAVIGATION------ */ 
+
+
+.menu-nav {
+
+    background:
+        var(--dark-green);
+
+    padding:
+        18px 8%;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        35px;
+
+}
+
+.menu-nav a {
+
+    color:
+        var(--white);
+
+    font-weight:
+        600;
+
+    text-decoration:
+        none;
+
+}
+
+.menu-nav a:hover {
+
+    color:
+        #efcb91;
+
+}
+
+
+/* -------MENU CATEGORIES------ */ 
+   
+
+.menu-category {
+
+    padding:
+        80px 8%;
+
+    background:
+        var(--white);
+
+}
+
+.menu-category.alternate {
+
+    background:
+        var(--cream);
+
+}
+
+.menu-inner {
+
+    max-width:
+        950px;
+
+    margin:
+        0 auto;
+
+}
+
+.menu-heading {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        45px;
+
+}
+
+.menu-heading h2 {
+
+    margin-bottom:
+        8px;
+
+}
+
+.menu-list {
+
+    border-top:
+        1px solid
+        var(--border);
+
+}
+
+.menu-item {
+
+    padding:
+        25px 0;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-start;
+
+    gap:
+        40px;
+
+    transition:
+        padding 0.3s ease;
+
+}
+
+.menu-item:hover {
+
+    padding-left:
+        10px;
+
+}
+
+.menu-item h3 {
+
+    margin-bottom:
+        5px;
+
+}
+
+.menu-item p {
+
+    max-width:
+        650px;
+
+}
+
+.price {
+
+    color:
+        var(--gold-dark);
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* ---------ABOUT STORY------------------------------ */
+
+
+.about-story {
+
+    max-width:
+        1300px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+
+}
+
+.story-text h2 {
+
+    margin-bottom:
+        25px;
+
+}
+
+.story-text p {
+
+    margin-bottom:
+        18px;
+
+}
+
+.story-image img {
+
+    width:
+        100%;
+
+    min-height:
+        600px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        10px;
+
+}
+
+
+/*----------- VALUES SECTION----------------------------- */
+
+
+.values {
+
+    background:
+        var(--cream);
+
+}
+
+.value-grid {
+
+    max-width:
+        1100px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:
+        30px;
+
+}
+
+.value-card {
+
+    background:
+        var(--white);
+
+    padding:
+        35px;
+
+    text-align:
+        center;
+
+    border-radius:
+        8px;
+
+}
+
+.value-card span {
+
+    display:
+        block;
+
+    font-size:
+        2.4rem;
+
+    margin-bottom:
+        15px;
+
+}
+
+.value-card h3 {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+/* -------- TEAM SECTION----------------------------- */
+
+
+.team-grid {
+
+    max-width:
+        1100px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:
+        30px;
+
+}
+
+.team-card {
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        8px;
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+.team-card:hover {
+
+    transform:
+        translateY(-6px);
+
+}
+
+.team-card img {
+
+    width:
+        100%;
+
+    height:
+        350px;
+
+    object-fit:
+        cover;
+
+}
+
+.team-info {
+
+    padding:
+        22px;
+
+    text-align:
+        center;
+
+}
+
+.team-info p {
+
+    color:
+        var(--gold-dark);
+
+    font-weight:
+        600;
+
+}
+
+
+/* -------- CONTACT SECTION----------------------------- */
+
+
+.contact-container {
+
+    max-width:
+        1200px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        70px;
+
+}
+
+.contact-details h2,
+.form-wrapper h2 {
+
+    margin-bottom:
+        30px;
+
+}
+
+.contact-box {
+
+    padding-bottom:
+        20px;
+
+    margin-bottom:
+        20px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+.contact-box h3 {
+
+    margin-bottom:
+        7px;
+
+}
+
+.contact-box a {
+
+    text-decoration:
+        none;
+
+    color:
+        var(--text-light);
+
+}
+
+.contact-box a:hover {
+
+    color:
+        var(--gold-dark);
+
+}
+
+
+
+/* -------- OPENING HOURS----------------------------- */
+
+
+.opening-hours {
+
+    margin-top:
+        30px;
+
+}
+
+.opening-hours h3 {
+
+    margin-bottom:
+        15px;
+
+}
+
+.hours-row {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        10px 0;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+.small-text {
+
+    font-size:
+        0.85rem;
+
+    margin-top:
+        12px;
+
+}
+
+
+/* -------- CONTACT FORM----------------------------- */
+
+.form-wrapper {
+
+    background:
+        var(--cream);
+
+    padding:
+        40px;
+
+    border-radius:
+        8px;
+
+}
+
+.contact-form {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        20px;
+
+}
+
+.form-group {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        7px;
+
+}
+
+.form-group label {
+
+    font-weight:
+        600;
+
+}
+
+.form-group input,
+.form-group textarea {
+
+    width:
+        100%;
+
+    padding:
+        13px;
+
+    border:
+        1px solid
+        #cfc8bd;
+
+    border-radius:
+        4px;
+
+    background:
+        var(--white);
+
+    color:
+        var(--text-dark);
+
+    font-family:
+        inherit;
+
+    font-size:
+        1rem;
+
+    outline:
+        none;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color:
+        var(--gold);
+
+}
+
+.form-group textarea {
+
+    resize:
+        vertical;
+
+}
+
+.submit-btn {
+
+    align-self:
+        flex-start;
+
+}
+
+
+/* -------- MAP SECTION----------------------------- */
+
+.map-section {
+
+    line-height:
+        0;
+
+}
+
+.map-section iframe {
+
+    width:
+        100%;
+
+}
+
+/* -------- FOOTER SECTION----------------------------- */
+
+footer {
+
+    background:
+        #172019;
+
+    color:
+        var(--white);
+
+    padding:
+        65px 8% 25px;
+
+}
+
+.footer-container {
+
+    max-width:
+        1200px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.3fr 1fr 1fr 1fr;
+
+    gap:
+        45px;
+
+}
+
+.footer-section h3 {
+
+    color:
+        var(--white);
+
+    margin-bottom:
+        18px;
+
+}
+
+.footer-section p {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    margin-bottom:
+        6px;
+
+}
+
+.footer-section a {
+
+    display:
+        block;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    text-decoration:
+        none;
+
+    margin-bottom:
+        8px;
+
+}
+
+.footer-section a:hover {
+
+    color:
+        var(--gold);
+
+}
+
+.footer-bottom {
+
+    max-width:
+        1200px;
+
+    margin:
+        40px auto 0;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.13
+        );
+
+    text-align:
+        center;
+
+}
+
+.footer-bottom p {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    font-size:
+        0.85rem;
+
+}
+
+
+/* -------- ANIMATIONS---------------------------- */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* -------- TABLET VIEW 1024px----------------------------- */
+
+@media (
+    max-width: 1024px
+) {
+
+    h1 {
+
+        font-size:
+            3.3rem;
+
+    }
+
+    .section {
+
+        padding:
+            75px 6%;
+
+    }
+
+
+    /* Featured dishes */
+
+    .dish-container {
+
+        flex-wrap:
+            wrap;
+
+    }
+
+    .dish-card {
+
+        min-width:
+            calc(
+                50% - 15px
+            );
+
+    }
+
+
+    /* Why Us */
+
+    .features {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+
+    /* Gallery */
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+
+    /* About */
+
+    .about-story {
+
+        gap:
+            40px;
+
+    }
+
+
+    /* Values */
+
+    .value-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+
+    /* Team */
+
+    .team-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+
+    /* Contact */
+
+    .contact-container {
+
+        gap:
+            40px;
+
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+}
+
+/* -------- MOBILE VIEW 768px AND BELOW----------------------------- */
+
+@media (
+    max-width: 768px
+) {
+
+    h1 {
+
+        font-size:
+            2.7rem;
+
+    }
+
+    h2 {
+
+        font-size:
+            1.9rem;
+
+    }
+
+    .section {
+
+        padding:
+            60px 6%;
+
+    }
+
+
+    /* Navigation */
+
+    .navbar {
+
+        flex-direction:
+            column;
+
+        gap:
+            13px;
+
+        padding:
+            15px 6%;
+
+    }
+
+    .nav-links {
+
+        width:
+            100%;
+
+        justify-content:
+            center;
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            12px 20px;
+
+    }
+
+    .nav-links a {
+
+        font-size:
+            0.88rem;
+
+    }
+
+
+    /* Hero */
+
+    .hero {
+
+        min-height:
+            68vh;
+
+    }
+
+    .hero-tagline {
+
+        font-size:
+            1.05rem;
+
+    }
+
+
+    /* Featured dishes */
+
+    .dish-container {
+
+        flex-direction:
+            column;
+
+    }
+
+    .dish-card {
+
+        width:
+            100%;
+
+    }
+
+
+    /* Why us */
+
+    .features {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* Gallery */
+
+    .gallery-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .gallery-grid img {
+
+        height:
+            330px;
+
+    }
+
+
+    /* CTA */
+
+    .cta {
+
+        padding:
+            75px 6%;
+
+    }
+
+    .cta h2 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    /* Page banners */
+
+    .page-banner {
+
+        min-height:
+            38vh;
+
+    }
+
+
+    /* Menu */
+
+    .menu-nav {
+
+        gap:
+            15px 25px;
+
+    }
+
+    .menu-category {
+
+        padding:
+            60px 6%;
+
+    }
+
+    .menu-item {
+
+        flex-direction:
+            column;
+
+        gap:
+            8px;
+
+    }
+
+
+    /* About */
+
+    .about-story {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .story-image img {
+
+        min-height:
+            auto;
+
+        max-height:
+            500px;
+
+    }
+
+
+    /* Values */
+
+    .value-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* Team */
+
+    .team-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* Contact */
+
+    .contact-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .form-wrapper {
+
+        padding:
+            28px 20px;
+
+    }
+
+    .hours-row {
+
+        flex-direction:
+            column;
+
+        gap:
+            3px;
+
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (
+    max-width: 420px
+) {
+
+    .logo {
+
+        font-size:
+            1.45rem;
+
+    }
+
+    .nav-links {
+
+        gap:
+            8px 14px;
+
+    }
+
+    .hero h1 {
+
+        font-size:
+            2.5rem;
+
+    }
+
+    .gallery-grid img {
+
+        height:
+            260px;
+
+    }
+
+}
