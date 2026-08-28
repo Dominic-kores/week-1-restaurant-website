@@ -16,7 +16,6 @@ GitHub Pages:
 `https://dominic-kores.github.io/week-1-restaurant-website/`
 
 
-
 ---
 
 ## Project Objectives
