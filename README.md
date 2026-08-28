@@ -13,8 +13,7 @@ The project was built to demonstrate practical understanding of HTML5, CSS3, Fle
 ## Live Website
 
 GitHub Pages:
-
-
+`https://dominic-kores.github.io/week-1-restaurant-website/`
 
 
 
